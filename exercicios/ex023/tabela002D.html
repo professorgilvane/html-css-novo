@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELAS 02D - CABEÇALHO FIXO</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+                       
+        }
+        h1{
+            font-size: 1.2em;
+
+        }
+        table {
+            width: 400px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        td, th { /*th=título
+                   td=dado*/
+            border: 1px solid black;
+            padding: 10px;
+        }
+        caption { /*Legenda-título*/
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+        thead, tfoot {
+            text-shadow: 1px 5px black;
+            background-color: #383838;
+            color: whitesmoke;
+            top: -1px;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: #383838;
+        }
+        tbody > tr:nth-child(odd) {/*(ímpar) ou (2n-1)*/
+                    background-color: lightgray;
+                    font-weight: bold;
+        }
+        tbody > tr:nth-child(even) {/*(par) ou (2n)*/
+                    background-color: white; /*para quando o fundo não for branco (tiver imagem por exemplo)
+                    dá para colocar mais configurações(de texto por exemplo)*/
+                    text-decoration: underline;
+
+        }
+        /* ou: tbody > tr:nth-child(2n) { 2n=de duas em duas linhas */
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Uso de tabelas grandes - CABEÇALHO FIXO</h1>
+        <!--
+            ANATOMIA PARA TABELAS GRANDES
+            TABLE = tabela
+                CAPTION 
+                THEAD >
+                    TR, TD, TH
+                TBODY >
+                    TR, TD, TH
+                TFOOT >
+                    TR, TD, TH
+        -->
+        <table>
+            <caption>População dos ESTADOS DO BRASIL</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Estado</th>
+                    <th scope="col" style="width: 70px;">População</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num"> 45.973.190</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num"> 21.322.692</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num"> 17.219.679</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num"> 14.850.513</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num"> 11.824.665	</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num"> 11.229.915</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num"> 45.973.190</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num"> 21.322.692</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num"> 17.219.679</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num"> 14.850.513</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num"> 11.824.665	</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num"> 11.229.915</td>
+                </tr>
+                <tr>
+                    <td>São Paulo</td>
+                    <td class="num"> 45.973.190</td>
+                </tr>
+                <tr>
+                    <td>Minas Gerais</td>
+                    <td class="num"> 21.322.692</td>
+                </tr>
+                <tr>
+                    <td>Rio de Janeiro</td>
+                    <td class="num"> 17.219.679</td>
+                </tr>
+                <tr>
+                    <td>Bahia</td>
+                    <td class="num"> 14.850.513</td>
+                </tr>
+                <tr>
+                    <td>Paraná</td>
+                    <td class="num"> 11.824.665	</td>
+                </tr>
+                <tr>
+                    <td>Rio Grande do Sul</td>
+                    <td class="num"> 11.229.915</td>
+                </tr>
+
+
+            </tbody>
+            <tfoot>
+                <th scope="row"> Total de habitantes</th>
+                <td class="num"> <strong>122.420.654</strong>
+                </td>
+            </tfoot>
+            </table>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nobis repudiandae exercitationem corrupti est laboriosam quo aliquid aspernatur, maxime debitis reiciendis! Velit sequi enim, ducimus sit similique corrupti illum maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi labore adipisci rem nobis, officiis vitae fugit recusandae nam hic explicabo cumque consequuntur id illo earum corrupti culpa blanditiis ad? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos fuga illo dicta obcaecati neque aut molestias laudantium quae, saepe, adipisci id! Vero tenetur accusamus fuga in reprehenderit magni? Natus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nobis repudiandae exercitationem corrupti est laboriosam quo aliquid aspernatur, maxime debitis reiciendis! Velit sequi enim, ducimus sit similique corrupti illum maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi labore adipisci rem nobis, officiis vitae fugit recusandae nam hic explicabo cumque consequuntur id illo earum corrupti culpa blanditiis ad? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos fuga illo dicta obcaecati neque aut molestias laudantium quae, saepe, adipisci id! Vero tenetur accusamus fuga in reprehenderit magni? Natus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nobis repudiandae exercitationem corrupti est laboriosam quo aliquid aspernatur, maxime debitis reiciendis! Velit sequi enim, ducimus sit similique corrupti illum maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi labore adipisci rem nobis, officiis vitae fugit recusandae nam hic explicabo cumque consequuntur id illo earum corrupti culpa blanditiis ad? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos fuga illo dicta obcaecati neque aut molestias laudantium quae, saepe, adipisci id! Vero tenetur accusamus fuga in reprehenderit magni? Natus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nobis repudiandae exercitationem corrupti est laboriosam quo aliquid aspernatur, maxime debitis reiciendis! Velit sequi enim, ducimus sit similique corrupti illum maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi labore adipisci rem nobis, officiis vitae fugit recusandae nam hic explicabo cumque consequuntur id illo earum corrupti culpa blanditiis ad? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos fuga illo dicta obcaecati neque aut molestias laudantium quae, saepe, adipisci id! Vero tenetur accusamus fuga in reprehenderit magni? Natus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nobis repudiandae exercitationem corrupti est laboriosam quo aliquid aspernatur, maxime debitis reiciendis! Velit sequi enim, ducimus sit similique corrupti illum maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi labore adipisci rem nobis, officiis vitae fugit recusandae nam hic explicabo cumque consequuntur id illo earum corrupti culpa blanditiis ad? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos fuga illo dicta obcaecati neque aut molestias laudantium quae, saepe, adipisci id! Vero tenetur accusamus fuga in reprehenderit magni? Natus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nobis repudiandae exercitationem corrupti est laboriosam quo aliquid aspernatur, maxime debitis reiciendis! Velit sequi enim, ducimus sit similique corrupti illum maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi labore adipisci rem nobis, officiis vitae fugit recusandae nam hic explicabo cumque consequuntur id illo earum corrupti culpa blanditiis ad? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos fuga illo dicta obcaecati neque aut molestias laudantium quae, saepe, adipisci id! Vero tenetur accusamus fuga in reprehenderit magni? Natus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nobis repudiandae exercitationem corrupti est laboriosam quo aliquid aspernatur, maxime debitis reiciendis! Velit sequi enim, ducimus sit similique corrupti illum maiores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nisi labore adipisci rem nobis, officiis vitae fugit recusandae nam hic explicabo cumque consequuntur id illo earum corrupti culpa blanditiis ad? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos fuga illo dicta obcaecati neque aut molestias laudantium quae, saepe, adipisci id! Vero tenetur accusamus fuga in reprehenderit magni? Natus.
+            </p>
+    </body>
+</html>
