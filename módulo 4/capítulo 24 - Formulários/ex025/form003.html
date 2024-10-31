@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            text-shadow: -8px 4px 8px gray;
+        }
+        input{
+            border-radius: 0px 5px;
+        }
+        input#inome, input#imedia, input#imes, input#idia, input#ihora {
+            display: block;
+        }
+        body{
+            background-color: rgb(171, 224, 224);
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+            <!--Existem 2 métodos de envio: GET (padrão) e post (não aparece dados na url - MAS ñ protege, dá p ver no navegador / inspecionar)-->
+            <p> <label for="inome">Nome</label> 
+                <input type="text" name="nome" id="inome" required maxlength="30" placeholder="Nome completo" autocomplete="name" required> </p> <!--INPUT=CAIXA-->
+            <p>
+                <label for="imedia">Média</label>
+                <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required> <!--number(só aceita números; step de quanto vai)-->
+            </p>
+            <p>
+                <label for="imes">Período Letivo</label>
+                <input type="month" name="mes" id="imes" value="2024-10">
+            </p>
+            <p>
+                <label for="idia">Dia da prova</label>
+                <input type="date" name="dia" id="idia">
+            </p>
+            <p>
+                <label for="ihora">Horário da prova</label>
+                <input type="time" name="hora" id="ihora">
+            </p>
+            <!--TEM QUE USAR O LABEL
+            <P><label for="isen">Senha:</label> <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" size="40" placeholder="senha do usuário-mínimo 8 caracteres" autocomplete="new-password"> size(quantas letras vai mostrar)</P>-->
+            <p>
+                <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"></p>
+        </form>
+    
+    
+</body>
+</html>
