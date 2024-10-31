@@ -13,9 +13,10 @@
             text-shadow: -8px 4px 8px gray;
         }
         input{
-            display: block;
             border-radius: 0px 5px;
-            
+        }
+        input#iusu, input#isen {
+            display: block;
         }
         body{
             background-color: rgb(171, 224, 224);
@@ -24,15 +25,15 @@
 </head>
 <body>
     <h1>Teste de Formulário</h1>
-    <form action="cadastro.php" method="post">
+    <form action="cadastro.php" method="post" autocomplete="on">
             <!--Existem 2 métodos de envio: GET (padrão) e post (não aparece dados na url - MAS ñ protege, dá p ver no navegador / inspecionar)-->
-            <p><label for="iusu">Usuário</label> <input type="text" name="usu" id="iusu"> </p> <!--INPUT=CAIXA-->
+            <p><label for="iusu">Usuário</label> <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="40" placeholder="nome do usuário" autocomplete="username"> </p> <!--INPUT=CAIXA-->
             <!--TEM QUE USAR O LABEL-->
-            <P><label for="isen">Senha:</label> <input type="text" name="sen" id="isen"> </P>
+            <P><label for="isen">Senha:</label> <input type="password" name="sen" id="isen" required minlength="8" maxlength="15" size="40" placeholder="senha do usuário-mínimo 8 caracteres" autocomplete="new-password"> <!--size(quantas letras vai mostrar)--> </P>
             <p><input type="submit" value="Enviar">
             <input type="reset" value="Limpar"></p>
         </form>
-    </div>
+    
     
 </body>
 </html>
