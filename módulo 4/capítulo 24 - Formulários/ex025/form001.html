@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            text-align: center;
+            text-shadow: -8px 4px 8px gray;
+        }
+        input{
+            display: block;
+            border-radius: 0px 5px;
+            
+        }
+        body{
+            background-color: rgb(171, 224, 224);
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro Formulário</h1>
+    <div id="form">
+        <form action="cadastro.php" method="post" autocomplete="off">
+            <!--Existem 2 métodos de envio: GET (padrão) e post (não aparece dados na url - MAS ñ protege, dá p ver no navegador / inspecionar)-->
+            <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"> </p> <!--INPUT=CAIXA-->
+            <!--TEM QUE USAR O LABEL-->
+            <P><label for="isobrenome">Sobrenome:</label> <input type="text" name="Sobrenome" id="isobrenome"> </P>
+            <p><input type="submit" value="Enviar"></p>
+        </form>
+    </div>
+    
+</body>
+</html>
